@@ -708,6 +708,7 @@
                 order = field.order;
                 field = field.field;
             }
+            alert(field);
 
             this._clearSortingCss();
             this._setSortingParams(field, order);
@@ -722,8 +723,11 @@
         },
 
         _setSortingParams: function(field, order) {
+            alert(field);
             field = this._normalizeField(field);
+            alert(field);
             order = order || ((this._sortField === field) ? this._reversedSortOrder(this._sortOrder) : SORT_ORDER_ASC);
+            alert(field);
 
             this._sortField = field;
             this._sortOrder = order;
